@@ -36,6 +36,13 @@ class CombineViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
         view.backgroundColor = .white
         
+        profileButton.isHidden = true
+        fireButton.isHidden = true
+        messageButton.isHidden = true
+        dislikeButton.isHidden = true
+        likeButton.isHidden = true
+        superlikeButton.isHidden = true
+        
         let loading = Loading(frame: view.frame)
         view.insertSubview(loading, at: 0)
         
@@ -48,6 +55,15 @@ class CombineViewController: UIViewController {
             if let users = users {
                 self.users = users
                 self.addCards()
+                self.addFooter()
+                self.addHeader()
+                
+                self.profileButton.isHidden = false
+                self.fireButton.isHidden = false
+                self.messageButton.isHidden = false
+                self.dislikeButton.isHidden = false
+                self.likeButton.isHidden = false
+                self.superlikeButton.isHidden = false
             }
         }
     }
