@@ -217,6 +217,8 @@ class CombineViewController: UIViewController {
         users = users.filter({ $0.id != card.tag })
     }
     
+    // MARK: - Action
+    
     @objc private func handlePan(_ gesture: UIPanGestureRecognizer) {
         guard let card = gesture.view as? CombineCardView else { return }
         
